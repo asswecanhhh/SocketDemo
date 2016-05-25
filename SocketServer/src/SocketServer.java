@@ -49,8 +49,8 @@ public class SocketServer {
 			this.socket = socket;
 			try {
 				in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-				msg = "服务器地址：" + this.socket.getInetAddress() + "come total:" 
-						+ mList.size() + "(服务器发送)";
+				msg = "service address:" + this.socket.getInetAddress() + "come total:" 
+						+ mList.size() + "(service post)";
 				this.sendmsg();
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -72,7 +72,7 @@ public class SocketServer {
 							this.sendmsg();
 							break;
 						} else {
-							msg = socket.getInetAddress() + ":" + msg +"(服务器发送)";
+							msg = socket.getInetAddress() + ":" + msg +"(service post)";
 							this.sendmsg();
 						}
 					}
